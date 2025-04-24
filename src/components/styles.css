@@ -1,0 +1,423 @@
+@import "tailwindcss";
+
+* {
+    box-sizing: border-box;
+    letter-spacing: 0.2px;
+  }
+
+.page-width{
+  width: 80vw;
+}
+
+.fade-load {
+  transform: translateY(30px);
+  transition: transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.fade-load.visible {
+  transform: translateY(0);
+}
+
+
+  
+.flexColCentered{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+body{
+    cursor: url('../assets/icons8-cursor-24.png') 16 16, auto;
+    overflow-x: hidden;
+    color: white;
+    font-family: Open Sans;
+    background-color:white;
+}
+
+section{
+  color: #374354;
+}
+
+a,button{
+    cursor: url('../assets/handpointing@2x.png') 16 16, auto;
+  }
+
+#navbar{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0.2px;
+    color: white;
+    /* height: 6rem; */
+    align-self: center;
+    cursor: url('../assets/handpointing@2x.png') 16 16, auto;
+}
+
+#navbar ul{
+align-self: main-start;
+}
+
+#navbar a:hover{
+  color: grey;
+}
+
+#logo {
+    width: 173px;
+    height: 35px;
+    align-self: center;
+}
+
+#socials{
+  align-self: main-end;
+}
+
+header{
+    background-image: 
+    linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)),
+    radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.7) 100%),
+    url("/assets/team-work.jpg");
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 85%,
+    50% 100%,
+    0 85%
+  );
+}
+
+#Hero{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:100px auto;
+  max-width: 40%;
+}
+
+
+.headings-font{
+  font-size: 4rem;
+}
+
+#Hero h1{
+  text-align: center;
+  font-weight: bold;
+}
+
+.section-heading{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #374354;
+}
+
+#Hero p{
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: light;
+  margin-bottom: 100px;
+}
+
+#Button{
+  background-color: #2091F9;
+  width: 155px;
+  height: 44px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: transform 0.3s ease-in-out;
+  color:white;
+}
+
+#Button:hover{
+  transform: scale(1.1);
+  
+}
+
+#Button:hover{
+  background-color: #1277d6;
+}
+
+#Features{
+  color: #252B42;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-top:50px;
+}
+
+#feature-heading{
+  text-align: center;
+  margin: 50px;
+}
+
+#feature-items{
+  padding:0px 10%;
+  text-align: center;
+}
+
+
+.Feature-card{
+  transition: transform 0.3s ease-in-out;
+}
+
+.vectors{
+  height: 40px;
+  width: 40px;
+}
+
+#Pitch{
+  color: #374354;
+  margin:10vh auto;
+}
+
+#pitch-text{
+  align-items: center;
+  justify-content: center;
+  padding:0px 7%;
+}
+
+#Mac{
+  max-width: 30vw;
+}
+
+#pitch-text #Button{
+  align-self: flex-start;
+}
+
+#video-container{
+  margin: 5vh auto;
+}
+
+.glow-shadow{
+  box-shadow: 0 0 30px 1px #374354;
+}
+
+#email{
+width: 273;
+height: 43;
+gap: 64px;
+padding-top: 10px;
+padding-right: 30px;
+padding-bottom: 10px;
+padding-left: 30px;
+border-radius: 39px;
+background: #efecec;
+margin-right: 20px;
+
+}
+
+#newsletter-container div:nth-child(1){
+font-weight: 700;
+font-size: 20px;
+line-height: 28px;
+letter-spacing: 0.1px;
+margin: 10vh auto;
+
+}
+
+#newsletter-container img{
+  max-width: 40%;
+}
+
+#newsletter-container{
+  justify-content: center;
+  align-items: center;
+  gap: 5vw;
+  margin: auto;
+}
+
+#partners{
+  margin:10vh auto;
+}
+
+
+#logo{
+  width: 193;
+  height: 63;
+}
+
+#partners-grid{
+  display: grid;
+  margin: 5vh auto;
+}
+
+.clients{
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+#partners Button{
+  margin: auto;
+}
+
+.clients{
+  transition: transform 0.3s ease-in-out;
+}
+
+.clients:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width:1200px){
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+  #logo{
+    order: 2;
+  }
+}
+
+@media (max-width:1024px){
+  .page-width{
+    width: 100vw;
+  }
+  #feature-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 70vw;
+  }
+
+  .Feature-card{
+    width: 70vw;
+    
+  }
+
+  .section-heading{
+    font-size: 2rem;
+  }
+
+  .headings-font{
+    font-size: 3rem;
+  }
+
+  .paragraph-font{
+    font-size:1rem;
+  }
+
+  #Hero{
+    max-width: 80vw;
+  }
+
+  #video-container{
+    max-width: 90vw;
+  }
+
+  #Pitch,#Pitch #Button,#newsletter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh 0px;
+    text-align: center;
+    align-self: center;
+  }
+
+  #pitch-text{
+    width:80%;
+    padding: 0px;
+  }
+
+  #Mac{
+    max-width: 70vw;
+    margin-top: 5vh;
+  }
+
+  #newsletter-container{
+    margin: 10vh auto;
+  }
+
+  #newsletter-container img{
+    max-width: 70vw;
+    margin-bottom: 5vh;
+  }
+
+  #Packs{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #contact-details{
+    display: flex;
+    flex-direction: column;
+  }
+  #Map{
+    height: 50vh !important;
+    width: 80vw !important;
+  }
+
+  .message{
+    height: 40vh !important;
+    width: 80vw !important;
+  }
+
+  #contactForm{
+    align-items: center;
+    justify-content: center;
+  }
+
+  #footer-container, #footer-pages , #footer-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#Packs{
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+#pack-card:nth-child(2) > div{
+  background-color: #2091F9;
+  padding: 20% 0px;
+}
+
+#pack-card {
+  padding: 8% 0px;
+}
+
+#pack-card:nth-child(2) > div *{
+  color: white !important;
+}
+
+#pack-card:nth-child(2) > div #Button{
+  color:#2091F9 !important;
+  background-color: white;
+}
+
+#location img{
+  height: 20px;
+  width: 20px;
+}
+
+#location h6{
+  font-size: 0.8rem;
+  padding: 3px;
+}
+
+.message{
+  height: 25vh;
+  width: 30vw;
+  border-radius: 10px !important;
+}
+
+.address{
+  padding: 0px 15%;
+}
